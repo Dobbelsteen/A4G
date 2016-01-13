@@ -1,0 +1,433 @@
+@import "../bower_components/bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+    font-family: "NeoSans";
+    src: url("../assets/font/NeoSansProMedium.ttf");
+}
+@font-face {
+    font-family: "NeoSans";
+    src: url("../assets/font/NeoSansProBold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "NeoSans";
+    src: url("../assets/font/NeoSansProItalic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "NeoSansLight";
+    src: url("../assets/font/NeoSansProLight.ttf");
+}
+/**
+ * Global Variables and CSS
+ */
+$font: NeoSans, sans-serif;
+$font-light: NeoSansLight, sans-serif;
+
+$color-white: #FFF;
+$color-light: #f7f8fa;
+$color-medium: #CACBCD;
+$color-dark: #202020;
+$color-blue: #74dcd3;
+
+$font-white: #FFF;
+$font-medium: #C9CBCD;
+$font-dark: #919296;
+$font-alt: $color-blue;
+$font-alt-red: #EC3349;
+$font-alt-red-light: #FF5E6E;
+
+html, body, nav {
+  font: 1em $font;
+  line-height: 1.4em;
+  color: $font-dark;
+  background-color: $color-white;
+  
+  -webkit-font-smoothing: antialiased;
+}
+
+.container, .nav-container{
+  width: 1040px;
+  clear: both;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  
+  @media screen and (max-width: 1080px){
+    width: 100%;
+  }  
+}
+
+.nav-container {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+a, a:active, a:focus {
+  color: $font-medium;
+  text-decoration: none;
+  
+  &:hover {
+    color: $font-alt;
+    text-decoration: none;
+  }
+}
+
+p {
+  font-family: $font-light;
+}
+
+h1 {
+  font-size: 4em;  
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  line-height: 1.4em;
+}
+
+h4 {
+  color: $font-alt;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  &.no-uppercase {
+    text-transform: none;
+  }
+}
+
+.section {
+  
+  padding-bottom: 2em;
+  
+  &.section-white {
+    background-color: $color-white;
+    color: $font-dark;
+  }
+  
+  &.section-blue {
+    background-color: $color-blue;
+    color: $font-white;
+  }
+  
+  &.section-light {
+    background-color: $color-light; 
+  }
+  
+  &.section-dark {
+    background-color: $color-dark;   
+  }
+}
+
+.alt-red {
+  color: $font-alt-red;
+}
+
+.info-cards {
+  &>div {
+      display: flex;
+  }
+}
+
+.card-white {
+  background-color: $color-white;
+  border-right: 2px solid $color-medium;
+  border-bottom: 2px solid $color-medium;
+  padding: 1em 1.5em;
+  
+  @media screen and (max-width: 767px) {
+    &:first-of-type {
+      margin-top: 1em;
+    }
+    margin-bottom: 1em; 
+  }
+}
+
+.light {
+  font-family: $font-light;
+}
+
+.bold {
+  font-family: $font;
+}
+
+/**
+ * Navigation
+ */
+
+.nav-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  border-bottom: 1px solid $font-medium !important;
+  
+  .nav-links {
+    margin-top: 0.9em;
+    height: 100%;
+    
+    a {
+      padding: 0.4em 0.8em;
+      font-size: 1em;
+      text-transform: uppercase;
+      margin-left: 1em;
+      
+      &.active {
+        color: $font-alt;
+      }
+      
+      &.nav-button {
+        color: $font-white;
+        background-color: $font-alt;
+      }
+    }
+  }
+}
+
+/**
+ * Footer
+ */
+ 
+footer {
+  background-color: $color-dark;
+  color: $font-light;
+   
+  .row {
+    div {              
+      display:  -webkit-box;
+      display: -webkit-flex;
+      display:  -ms-flexbox;
+      display:         flex;
+      align-items: center;
+      
+      @media(max-width: 767px) {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+/**
+ * Section overrides
+ */
+ 
+#site-intro {
+  margin-top: 74px;
+  
+  @media(max-width: 767px) {
+    margin-top: 0;
+    .intro-logo {
+        width: 100%;
+    }
+    
+    h1 {
+      font-size: 3em;
+    }
+  }
+}
+
+#site-info {
+    
+  @media screen and (max-width: 767px) {
+    .info-container > div{
+      margin-bottom: 1em; 
+      
+      &:last-of-type {
+        margin-bottom: 0em;
+      }
+    }
+  }
+}
+ 
+.info-small {
+  font-family: $font-light;
+  display: block;
+}
+ 
+.info-bold {
+  font-family: $font;
+  display: block;
+}
+
+.info-nr {
+  display: block;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+#site-media {
+  padding-bottom: 0;
+  
+  .container {
+    padding-top: 0;
+    padding-bottom: 1px;
+  }
+}
+
+#site-register {
+  h2 {
+    color: $font-alt;
+  }
+  
+  .side-img {
+    width: 100%;
+  }
+}
+
+.mail-icon {
+  margin-top: -4px;
+}
+
+@media screen and (max-width: 480px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+/**
+ * Components
+ */
+
+.chip {
+  color: $color-white;
+  padding: 0.5em 1em;
+  margin: 0.2em;
+  border-radius: 15px;
+      
+  &.red-chip {
+    background-color: $font-alt-red;
+  }
+  
+  &.blue-chip {
+    background-color: $font-alt;
+  }
+
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid red;
+  
+  &.hr-white {
+    border-top-color: $color-white;
+  }
+  
+  &.hr-blue {
+    border-top-color: $color-blue;
+  }
+  
+  &.hr-light {
+    border-top-color: $color-light;
+  }
+  
+  &.hr-dark {
+    border-top-color: $color-dark;
+  }
+}
+
+/**
+ * Timetable
+ */
+ 
+.timetable {
+  margin: 1em;
+  
+  span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .col-md-3 {
+    border-right: 1px solid $color-medium;
+    border-bottom: 1px solid $color-medium;
+  }
+  
+  .col-md-9 {
+    border-bottom: 1px solid $color-medium;
+  }
+  
+  .last {
+    border-bottom: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    
+    .col-md-3 {
+      border-right: none;
+    }
+  }
+} 
+
+
+/**
+ * Form
+ */
+ 
+.subscribe-form {
+  width: 100%;
+  
+  input {
+    width: 75%;
+    padding:1em 1.5em;
+    margin: auto 0;
+    border: none;
+    outline: none;
+    font-family: $font-light;
+    color: $font-white;
+    background-color: lighten($color-blue, 8%);
+    
+    &:focus {
+      outline: none;
+    }
+    
+    @media screen and (max-width: 767px) {
+      width: 70%;  
+    }
+  }
+  
+  ::-webkit-input-placeholder {
+    color: $font-white;
+  }
+  
+  input[type="submit"] {
+    width: 25%;
+    background-color: $font-alt-red-light;
+    color: $color-white;
+    font-family: $font;
+    
+    @media screen and (max-width: 767px) {
+      width: 30%;  
+    }
+  }
+} 
+
+/**
+ * Bootstrap overrides
+ */
+ 
+
+
+@media screen and (min-width: 768px) {
+  .row {
+    display:  -webkit-box;
+    display: -webkit-flex;
+    display:  -ms-flexbox;
+    display:         flex;
+  }
+}
+
