@@ -98,3 +98,6 @@ tests
 # Unneeded assets
 docs/assets/
 .vscode/
+
+bower_components/
+node_modules/
