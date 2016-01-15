@@ -3,24 +3,47 @@
 @import "../bower_components/pgwslider/pgwslider.min.css";
 
 @font-face {
-    font-family: "NeoSans";
-    src: url("../assets/font/NeoSansProMedium.ttf");
+    font-family: 'NeoSans';
+    src: url('../assets/font/NeoSansProMedium.eot');
+    src: url('../assets/font/font/NeoSansProMedium.eot') format('embedded-opentype'),
+         url('../assets/font/NeoSansProMedium.woff2') format('woff2'),
+         url('../assets/font/NeoSansProMedium.woff') format('woff'),
+         url('../assets/font/NeoSansProMedium.ttf') format('truetype'),
+         url('../assets/font/NeoSansProMedium.svg#NeoSansProMedium') format('svg');
 }
 @font-face {
-    font-family: "NeoSans";
-    src: url("../assets/font/NeoSansProBold.ttf");
+    font-family: 'NeoSans';
+    src: url('../assets/font/NeoSansProBold.eot');
+    src: url('../assets/font/NeoSansProBold.eot') format('embedded-opentype'),
+         url('../assets/font/NeoSansProBold.woff2') format('woff2'),
+         url('../assets/font/NeoSansProBold.woff') format('woff'),
+         url('../assets/font/NeoSansProBold.ttf') format('truetype'),
+         url('../assets/font/NeoSansProBold.svg#NeoSansProBold') format('svg');
+         
     font-weight: bold;
 }
 @font-face {
-    font-family: "NeoSans";
-    src: url("../assets/font/NeoSansProItalic.ttf");
+    font-family: 'NeoSans';
+    src: url('../assets/font/NeoSansProItalic.eot');
+    src: url('../assets/font/NeoSansProItalic.eot') format('embedded-opentype'),
+         url('../assets/font/NeoSansProItalic.woff2') format('woff2'),
+         url('../assets/font/NeoSansProItalic.woff') format('woff'),
+         url('../assets/font/NeoSansProItalic.ttf') format('truetype'),
+         url('../assets/font/NeoSansProItalic.svg#NeoSansProItalic') format('svg');
+         
     font-style: italic;
 }
 
 @font-face {
-    font-family: "NeoSansLight";
-    src: url("../assets/font/NeoSansProLight.ttf");
+    font-family: 'NeoSansLight';
+    src: url('../assets/font/NeoSansProLight.eot');
+    src: url('../assets/font/NeoSansProLight.eot') format('embedded-opentype'),
+         url('../assets/font/NeoSansProLight.woff2') format('woff2'),
+         url('../assets/font/NeoSansProLight.woff') format('woff'),
+         url('../assets/font/NeoSansProLight.ttf') format('truetype'),
+         url('../assets/font/NeoSansProLight.svg#NeoSansProLight') format('svg');
 }
+
 /**
  * Global Variables and CSS
  */
