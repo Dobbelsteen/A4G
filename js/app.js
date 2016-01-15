@@ -76,5 +76,17 @@ $(function() {
         $('.nav-mobile-links').slideToggle();
         return false;
     });
+    
+    var data;
+    
+    $.ajax({
+        url: 'http://datatank.stad.gent/4/grondgebied.json',
+        data: data,
+        success: function(data) {
+            console.log(data);
+        },
+        dataType: 'json'
+    });
+    
   
 });
