@@ -1,4 +1,6 @@
 @import url(../bower_components/bootstrap/dist/css/bootstrap.css);
+@import url(../bower_components/fontawesome/css/font-awesome.min.css);
+@import url(../bower_components/pgwslider/pgwslider.min.css);
 @font-face {
   font-family: "NeoSans";
   src: url("../assets/font/NeoSansProMedium.ttf"); }
@@ -113,6 +115,10 @@ nav {
   nav .nav-links {
     margin-top: 0.9em;
     height: 100%; }
+    @media (max-width: 767px) {
+      nav .nav-links {
+        margin-top: 0;
+        margin-right: 1em; } }
     nav .nav-links a {
       padding: 0.4em 0.8em;
       font-size: 1em;
@@ -123,6 +129,22 @@ nav {
       nav .nav-links a.nav-button {
         color: #FFF;
         background-color: #74dcd3; }
+  nav .nav-mobile-links {
+    display: none;
+    text-align: center;
+    clear: both; }
+    nav .nav-mobile-links a {
+      display: block;
+      padding: 0.4em 0.8em;
+      font-size: 1em;
+      text-transform: uppercase;
+      margin-left: 0.8em;
+      margin-right: 0.8em; }
+      nav .nav-mobile-links a.active {
+        color: #74dcd3; }
+      nav .nav-mobile-links a.nav-button {
+        color: #FFF;
+        background-color: #74dcd3; }
 
 /**
  * Footer
@@ -130,16 +152,34 @@ nav {
 footer {
   background-color: #202020;
   color: NeoSansLight, sans-serif; }
-  footer .row div {
-    display: -webkit-box;
+  footer .row {
     display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    align-items: center; }
-    @media (max-width: 767px) {
-      footer .row div {
-        justify-content: center;
-        margin-bottom: 10px; } }
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /* You can set flex-wrap and flex-direction individually */
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* Or do it all in one line with flex flow */
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    /* tweak the where items line up on the row */
+    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+    -webkit-align-content: flex; }
+    footer .row div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      justify-content: left; }
+      @media (max-width: 767px) {
+        footer .row div {
+          margin-bottom: 10px; } }
 
 /**
  * Section overrides

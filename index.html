@@ -21,8 +21,8 @@
         <meta name="twitter:image" content="http://appsforghent.be/assets/svg/logo.svg" />
         <meta name="twitter:url" content="http://appsforghent.be/" />
         <link rel="icon" type="image/x-icon" href="" />
-        <link href="bower_components/pgwslider/pgwslider.min.css" rel="stylesheet">
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/pgwslider/pgwslider.min.js"></script>
         <link href="css/a4g.css" rel="stylesheet">
         <script src="js/app.js"></script>
@@ -52,14 +52,15 @@
             <div class="nav-container">
                 <span class="logo-top"><img src="assets/svg/logo.svg"></span>
                 <span class="pull-right nav-links">
-                    <!-- Responsive Navigation
+                    <a href="#" id="nav-toggle"><i class="fa fa-bars fa-3x"></i></a>
+                </span>
+                <div class="nav-mobile-links">
                     <a href="#site-intro" class="active">Home</a>
                     <a href="#site-info">Info</a>
                     <a href="#site-media">Media</a>
-                    <a href="#site-programme">Programma</a>
-                    <a href="#site-register" class="nav-button">Inschrijven</a>
-                    -->
-                </span>
+                    <a href="#site-programme">Programme</a>
+                    <a href="#site-register" class="nav-button">Sign up</a>
+                </div>
             </div>
         </nav>
         <nav class="navbar-fixed-top hidden-xs">
@@ -345,19 +346,19 @@
             <hr class="hr-blue" />
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-sm-3 col-xs-6">
                         <a href="https://stad.gent/"><img src="assets/png/gent.png"></a>
                         <span class="light">&copy; 2016 City of Ghent</span>
                     </div>
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-sm-3 col-xs-6">
                         <img src="assets/svg/A4G.svg"> &nbsp;
                         <span class="light">APPS FOR GHENT</span>
                     </div>
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-sm-3 col-xs-6">
                         <a href="https://www.facebook.com/AppsForGhent/"><img src="assets/svg/facebook.svg"></a>
                         <a href="https://twitter.com/appsforghent"><img src="assets/svg/twitter.svg"></a>
                     </div>
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-sm-3 col-xs-6">
                         <span class="light">Design by</span>&nbsp;ESKIDOOS
                     </div>
                 </div>
