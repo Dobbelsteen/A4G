@@ -36,10 +36,6 @@ html, body, nav {
     .container, .nav-container {
       width: 100%; } }
 
-.nav-container {
-  padding-top: 15px;
-  padding-bottom: 20px; }
-
 a, a:active, a:focus {
   color: #C9CBCD;
   text-decoration: none; }
@@ -107,6 +103,8 @@ h4 {
  * Navigation
  */
 .nav-container {
+  padding-top: 15px;
+  padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -119,7 +117,7 @@ nav {
       padding: 0.4em 0.8em;
       font-size: 1em;
       text-transform: uppercase;
-      margin-left: 1em; }
+      margin-left: 0.8em; }
       nav .nav-links a.active {
         color: #74dcd3; }
       nav .nav-links a.nav-button {
@@ -180,6 +178,11 @@ footer {
   #site-media .container {
     padding-top: 0;
     padding-bottom: 1px; }
+    @media (max-width: 767px) {
+      #site-media .container {
+        width: 100%;
+        margin: 0;
+        padding: 0; } }
 
 #site-register h2 {
   color: #74dcd3; }
@@ -224,23 +227,26 @@ hr {
  * Timetable
  */
 .timetable {
-  margin: 1em; }
+  margin: 0; }
   .timetable span {
     margin-top: 10px;
     margin-bottom: 10px;
     display: block; }
-  .timetable .col-md-3 {
+  .timetable .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .timetable .col-xs-3 {
     border-right: 1px solid #CACBCD;
     border-bottom: 1px solid #CACBCD; }
-  .timetable .col-md-9 {
+  .timetable .col-xs-9 {
     border-bottom: 1px solid #CACBCD; }
-  .timetable .last {
-    border-bottom: none; }
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     .timetable {
-      margin: 0; }
-      .timetable .col-md-3 {
-        border-right: none; } }
+      margin: 1em; }
+      .timetable .timetable-last {
+        border-bottom: none; } }
 
 /**
  * Form
@@ -258,9 +264,6 @@ hr {
     background-color: #95e4dd; }
     .subscribe-form input:focus {
       outline: none; }
-    @media screen and (max-width: 767px) {
-      .subscribe-form input {
-        width: 70%; } }
   .subscribe-form ::-webkit-input-placeholder {
     color: #FFF; }
   .subscribe-form input[type="submit"] {
@@ -268,9 +271,6 @@ hr {
     background-color: #FF5E6E;
     color: #FFF;
     font-family: NeoSans, sans-serif; }
-    @media screen and (max-width: 767px) {
-      .subscribe-form input[type="submit"] {
-        width: 30%; } }
 
 /**
  * Bootstrap overrides
@@ -281,3 +281,28 @@ hr {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
+
+/**
+ * pgwSlider override
+ */
+.pgwSlider .ps-current .ps-prev, .pgwSlider .ps-current .ps-next {
+  padding: 20px;
+  border: none;
+  background: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7; }
+  .pgwSlider .ps-current .ps-prev:hover, .pgwSlider .ps-current .ps-next:hover {
+    opacity: 1; }
+
+.pgwSlider .ps-current .ps-prev {
+  left: 10px;
+  background-image: url("../assets/svg/arrow_links.svg"); }
+
+.pgwSlider .ps-current .ps-next {
+  right: 10px;
+  background-image: url("../assets/svg/arrow_rechts.svg"); }
+
+.pgwSlider .ps-current .ps-prevIcon, .pgwSlider .ps-current .ps-nextIcon {
+  border: none;
+  border-radius: none; }
