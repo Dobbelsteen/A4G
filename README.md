@@ -1,7 +1,7 @@
 MappsForGhent
 ==============
 
-Website for MappsForGhent 2016
+Website for AppsForGhent 2016
 
 # Deployment
 
