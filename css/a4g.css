@@ -1,6 +1,6 @@
-@import url(../bower_components/bootstrap/dist/css/bootstrap.css);
-@import url(../bower_components/fontawesome/css/font-awesome.min.css);
-@import url(../bower_components/pgwslider/pgwslider.min.css);
+@import url(../vendor/bootstrap/dist/css/bootstrap.css);
+@import url(../vendor/fontawesome/css/font-awesome.min.css);
+@import url(../vendor/pgwslider/pgwslider.min.css);
 @font-face {
   font-family: 'NeoSans';
   src: url("../assets/font/NeoSansProMedium.eot");
@@ -98,6 +98,8 @@ h4 {
       margin-bottom: 1em; }
       .card-white:first-of-type {
         margin-top: 1em; } }
+  .card-white a {
+    color: #74dcd3; }
 
 .light {
   font-family: NeoSansLight, sans-serif; }
@@ -154,7 +156,11 @@ nav {
  */
 footer {
   background-color: #202020;
-  color: NeoSansLight, sans-serif; }
+  color: #919296; }
+  footer a {
+    color: #919296; }
+    footer a:hover {
+      color: #C9CBCD; }
   footer .row {
     display: -webkit-flex;
     display: flex;
@@ -162,17 +168,8 @@ footer {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-    /* You can set flex-wrap and flex-direction individually */
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    /* Or do it all in one line with flex flow */
     -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    /* tweak the where items line up on the row */
-    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-    -webkit-align-content: flex; }
+    flex-flow: row wrap; }
     footer .row div {
       display: -webkit-box;
       display: -webkit-flex;
@@ -189,6 +186,9 @@ footer {
  */
 #site-intro {
   margin-top: 74px; }
+  #site-intro h2 {
+    margin-top: 30px;
+    margin-bottom: 0; }
   @media (max-width: 767px) {
     #site-intro {
       margin-top: 0; }
@@ -288,7 +288,7 @@ hr {
   @media screen and (min-width: 768px) {
     .timetable {
       margin: 1em; }
-      .timetable .timetable-last {
+      .timetable .row:last-of-type .col-xs-9, .timetable .row:last-of-type .col-xs-3 {
         border-bottom: none; } }
 
 /**

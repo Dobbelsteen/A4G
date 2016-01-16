@@ -1,6 +1,6 @@
-@import "../bower_components/bootstrap/dist/css/bootstrap.css";
-@import "../bower_components/fontawesome/css/font-awesome.min.css";
-@import "../bower_components/pgwslider/pgwslider.min.css";
+@import "../vendor/bootstrap/dist/css/bootstrap.css";
+@import "../vendor/fontawesome/css/font-awesome.min.css";
+@import "../vendor/pgwslider/pgwslider.min.css";
 
 @font-face {
     font-family: 'NeoSans';
@@ -56,17 +56,17 @@ $color-medium: #CACBCD;
 $color-dark: #202020;
 $color-blue: #74dcd3;
 
-$font-white: #FFF;
-$font-medium: #C9CBCD;
-$font-dark: #919296;
-$font-alt: $color-blue;
-$font-alt-red: #EC3349;
-$font-alt-red-light: #FF5E6E;
+$font-color-white: #FFF;
+$font-color-medium: #C9CBCD;
+$font-color-dark: #919296;
+$font-color-alt: $color-blue;
+$font-color-alt-red: #EC3349;
+$font-color-alt-red-light: #FF5E6E;
 
 html, body, nav {
   font: 1em $font;
   line-height: 1.4em;
-  color: $font-dark;
+  color: $font-color-dark;
   background-color: $color-white;
   -webkit-font-smoothing: antialiased;
 }
@@ -83,11 +83,11 @@ html, body, nav {
 }
 
 a, a:active, a:focus {
-  color: $font-medium;
+  color: $font-color-medium;
   text-decoration: none;
   
   &:hover {
-    color: $font-alt;
+    color: $font-color-alt;
     text-decoration: none;
   }
 }
@@ -110,7 +110,7 @@ h3 {
 }
 
 h4 {
-  color: $font-alt;
+  color: $font-color-alt;
   text-transform: uppercase;
   font-weight: bold;
   
@@ -125,12 +125,12 @@ h4 {
   
   &.section-white {
     background-color: $color-white;
-    color: $font-dark;
+    color: $font-color-dark;
   }
   
   &.section-blue {
     background-color: $color-blue;
-    color: $font-white;
+    color: $font-color-white;
   }
   
   &.section-light {
@@ -143,7 +143,7 @@ h4 {
 }
 
 .alt-red {
-  color: $font-alt-red;
+  color: $font-color-alt-red;
 }
 
 .info-cards {
@@ -163,6 +163,10 @@ h4 {
       margin-top: 1em;
     }
     margin-bottom: 1em; 
+  }
+  
+  a {
+    color: $font-color-alt;
   }
 }
 
@@ -186,7 +190,7 @@ h4 {
 }
 
 nav {
-  border-bottom: 1px solid $font-medium !important;
+  border-bottom: 1px solid $font-color-medium !important;
   
   .nav-links {
     margin-top: 0.9em;
@@ -203,12 +207,12 @@ nav {
       margin-left: 0.8em;
       
       &.active {
-        color: $font-alt;
+        color: $font-color-alt;
       }
       
       &.nav-button {
-        color: $font-white;
-        background-color: $font-alt;
+        color: $font-color-white;
+        background-color: $font-color-alt;
       }
     }
   }
@@ -227,12 +231,12 @@ nav {
       margin-right: 0.8em;
       
       &.active {
-        color: $font-alt;
+        color: $font-color-alt;
       }
       
       &.nav-button {
-        color: $font-white;
-        background-color: $font-alt;
+        color: $font-color-white;
+        background-color: $font-color-alt;
       }
     }
   }
@@ -244,39 +248,35 @@ nav {
  
 footer {
   background-color: $color-dark;
-  color: $font-light;
+  color: $font-color-dark;
+  
+  a {
+    color: $font-color-dark;
+    
+    &:hover {
+      color: $font-color-medium;
+    }
+  }
    
   .row {
-       display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   /* You can set flex-wrap and flex-direction individually */
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
-   /* Or do it all in one line with flex flow */
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
-   /* tweak the where items line up on the row */
-   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-   -webkit-align-content: flex;
-   
-    
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+      
     div {              
       display:  -webkit-box;
       display: -webkit-flex;
       display:  -ms-flexbox;
       display:         flex;
-      align-items:    center;
+      align-items:   center;
       justify-content: left;
-
       
       @media(max-width: 767px) {
-
         margin-bottom: 10px;
       }
     }
@@ -289,6 +289,11 @@ footer {
  
 #site-intro {
   margin-top: 74px;
+  
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
   
   @media(max-width: 767px) {
     margin-top: 0;
@@ -349,7 +354,7 @@ footer {
 
 #site-register {
   h2 {
-    color: $font-alt;
+    color: $font-color-alt;
   }
   
   .side-img {
@@ -374,17 +379,17 @@ footer {
  */
 
 .chip {
-  color: $color-white;
+  color: $font-color-white;
   padding: 0.5em 1em;
   margin: 0.2em;
   border-radius: 15px;
       
   &.red-chip {
-    background-color: $font-alt-red;
+    background-color: $font-color-alt-red;
   }
   
   &.blue-chip {
-    background-color: $font-alt;
+    background-color: $font-color-alt;
   }
 }
 
@@ -445,8 +450,11 @@ hr {
   
   @media screen and (min-width: 768px) {
     margin: 1em;
-    .timetable-last {
-      border-bottom: none;
+    
+    .row:last-of-type {
+      .col-xs-9, .col-xs-3 {
+        border-bottom: none;
+      }
     }
   }
 } 
@@ -466,7 +474,7 @@ hr {
     border: none;
     outline: none;
     font-family: $font-light;
-    color: $font-white;
+    color: $font-color-white;
     background-color: lighten($color-blue, 8%);
     
     &:focus {
@@ -475,12 +483,12 @@ hr {
   }
   
   ::-webkit-input-placeholder {
-    color: $font-white;
+    color: $font-color-white;
   }
   
   input[type="submit"] {
     width: 25%;
-    background-color: $font-alt-red-light;
+    background-color: $font-color-alt-red-light;
     color: $color-white;
     font-family: $font;
   }

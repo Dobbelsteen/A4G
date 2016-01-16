@@ -20,7 +20,7 @@ To compile the SCSS, run
 Upload following files and folders to your webspace:
 
 - assets/  
-- bower_components/  
+- vendor/  
 - css/  
 - js/  
 - index.html
