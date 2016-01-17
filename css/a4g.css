@@ -134,6 +134,8 @@ nav {
       nav .nav-links a.nav-button {
         color: #FFF;
         background-color: #74dcd3; }
+  nav #nav-toggle {
+    margin-right: 1em; }
   nav .nav-mobile-links {
     display: none;
     text-align: center;
@@ -193,15 +195,22 @@ footer {
     #site-intro {
       margin-top: 0; }
       #site-intro .intro-logo {
-        width: 100%; }
+        width: 80%; }
       #site-intro h1 {
         font-size: 3em; } }
+  @media (max-width: 480px) {
+    #site-intro h1 {
+      font-size: 2em; }
+    #site-intro h2 {
+      font-size: 1.5em; } }
 
 @media screen and (max-width: 767px) {
   #site-info .info-container > div {
     margin-bottom: 1em; }
     #site-info .info-container > div:last-of-type {
-      margin-bottom: 0em; } }
+      margin-bottom: 0em; }
+  #site-info h3 {
+    font-size: 1.5em; } }
 
 .info-small {
   font-family: NeoSansLight, sans-serif;
@@ -297,7 +306,7 @@ hr {
 .subscribe-form {
   width: 100%; }
   .subscribe-form input {
-    width: 75%;
+    width: 70%;
     padding: 1em 1.5em;
     margin: auto 0;
     border: none;
@@ -310,7 +319,7 @@ hr {
   .subscribe-form ::-webkit-input-placeholder {
     color: #FFF; }
   .subscribe-form input[type="submit"] {
-    width: 25%;
+    width: 30%;
     background-color: #FF5E6E;
     color: #FFF;
     font-family: NeoSans, sans-serif; }
