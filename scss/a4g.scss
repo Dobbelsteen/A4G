@@ -51,17 +51,16 @@ $font: NeoSans, sans-serif;
 $font-light: NeoSansLight, sans-serif;
 
 $color-white: #FFF;
-$color-light: #f7f8fa;
+$color-light: #F0F1F1;
 $color-medium: #CACBCD;
-$color-dark: #202020;
-$color-blue: #74dcd3;
+$color-dark: #231F20;
+$color-blue: #00DBC0;
 
 $font-color-white: #FFF;
 $font-color-medium: #C9CBCD;
-$font-color-dark: #919296;
+$font-color-dark: #666666;
 $font-color-alt: $color-blue;
-$font-color-alt-red: #EC3349;
-$font-color-alt-red-light: #FF5E6E;
+$font-color-alt-red: #FF3232;
 
 html, body, nav {
   font: 1em $font;
@@ -74,8 +73,8 @@ html, body, nav {
 .container, .nav-container{
   width: 1040px;
   clear: both;
-  padding-top: 30px;
-  padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 10px; 
   
   @media screen and (max-width: 1080px){
     width: 100%;
@@ -293,9 +292,15 @@ footer {
 #site-intro {
   margin-top: 74px;
   
+  h1 {
+    margin-bottom: 10px;
+  }
+  
   h2 {
-    margin-top: 30px;
-    margin-bottom: 0;
+    margin-top: -5px;
+    margin-bottom: 25px;
+    font-family: $font-light;
+    font-size: 2.4em;
   }
   
   @media(max-width: 767px) {
@@ -309,7 +314,11 @@ footer {
     }
   }
   
-  @media(max-width: 480px) {    
+  @media(max-width: 480px) { 
+    .container {
+        padding-top: 0;  
+    }
+ 
     h1 {
       font-size: 2em;
     }
@@ -321,6 +330,11 @@ footer {
 }
 
 #site-info {
+  
+  .info-container {
+    margin-top: 20px;
+  }
+  
   @media screen and (max-width: 767px) {
     .info-container > div {
       margin-bottom: 1em; 
@@ -357,7 +371,7 @@ footer {
   
   .container {
     padding-top: 0;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     
     @media(max-width: 767px) {
       width: 100%;
@@ -370,6 +384,8 @@ footer {
 }
 
 #site-register {
+  color: $font-color-medium;
+  
   h2 {
     color: $font-color-alt;
   }
@@ -410,7 +426,7 @@ footer {
   }
 }
 
-hr {
+.hrhrhrh {
   margin-top: 0;
   margin-bottom: 0;
   width: 0;
@@ -421,6 +437,7 @@ hr {
   
   &.hr-white {
     border-top-color: $color-white;
+    
   }
   
   &.hr-blue {
@@ -433,6 +450,37 @@ hr {
   
   &.hr-dark {
     border-top-color: $color-dark;
+  }
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: none;
+  
+  &:after { 
+    background: url('../assets/svg/spacers/lip-dark.svg') no-repeat top center;
+    content: "";
+    display: block;
+    height: 25px; /* height of the ornament */
+    position: relative;
+    top: -1px; /* half the height of the ornament */
+  }
+    
+  &.hr-white:after {
+    background: url('../assets/svg/spacers/lip-light.svg') no-repeat top center;
+  }
+  
+  &.hr-blue:after {
+    background: url('../assets/svg/spacers/lip-green.svg') no-repeat top center;
+  }
+  
+  &.hr-light:after {
+    background: url('../assets/svg/spacers/lip-med.svg') no-repeat top center;
+  }
+  
+  &.hr-dark:after {
+    background: url('../assets/svg/spacers/lip-dark.svg') no-repeat top center;
   }
 }
 
@@ -482,6 +530,7 @@ hr {
  */
  
 .subscribe-form {
+  margin-top: 10px;
   width: 100%;
   
   input {
@@ -492,7 +541,7 @@ hr {
     outline: none;
     font-family: $font-light;
     color: $font-color-white;
-    background-color: lighten($color-blue, 8%);
+    background-color: lighten($color-blue, 3%);
     
     &:focus {
       outline: none;
@@ -505,7 +554,7 @@ hr {
   
   input[type="submit"] {
     width: 30%;
-    background-color: $font-color-alt-red-light;
+    background-color: $font-color-alt-red;
     color: $color-white;
     font-family: $font;
   }
@@ -528,32 +577,40 @@ hr {
  * pgwSlider override
  */
  
-.pgwSlider .ps-current{
-  .ps-prev, .ps-next {
-    padding: 20px;
-    border: none;
-    background: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.7;
+.pgwSlider {
+  .ps-current {
+    .ps-prev, .ps-next {
+      padding: 20px;
+      border: none;
+      background: none;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.7;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
     
-    &:hover {
-      opacity: 1;
+    .ps-prev {
+      left: 10px;
+      background-image: url('../assets/svg/arrow_links.svg');
+    }
+    
+    .ps-next {
+      right: 10px;
+      background-image: url('../assets/svg/arrow_rechts.svg');
+    }
+    
+    .ps-prevIcon, .ps-nextIcon {
+      border: none;
+      border-radius: none;
     }
   }
-   
-  .ps-prev {
-    left: 10px;
-    background-image: url('../assets/svg/arrow_links.svg');
-  }
-   
-  .ps-next {
-    right: 10px;
-    background-image: url('../assets/svg/arrow_rechts.svg');
-  }
-   
-  .ps-prevIcon, .ps-nextIcon {
-    border: none;
-    border-radius: none;
+  
+  &.narrow {
+    .ps-current > .ps-next, .ps-current > .ps-prev  {
+        padding: 15px;
+    }
   }
 }
