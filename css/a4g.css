@@ -89,7 +89,12 @@ h4 {
   display: flex; }
 
 .card-white {
-  padding: 1em 1.5em; }
+  /*
+  background-color: $color-white;
+  border-right: 2px solid $color-medium;
+  border-bottom: 2px solid $color-medium; 
+  */
+  padding: 1em; }
   @media screen and (max-width: 767px) {
     .card-white {
       margin-bottom: 1em; }
