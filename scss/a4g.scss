@@ -151,9 +151,11 @@ h4 {
 }
 
 .card-white {
+  /*
   background-color: $color-white;
   border-right: 2px solid $color-medium;
-  border-bottom: 2px solid $color-medium;
+  border-bottom: 2px solid $color-medium; 
+  */
   padding: 1em 1.5em;
   
   @media screen and (max-width: 767px) {
